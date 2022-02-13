@@ -15,3 +15,10 @@ app.use(express.static(path.join(__dirname, '../build'))); // TODO(jack.comeback
 app.use(cookieParser());
 app.use(express.json());
 
+app.get('/api/ping', (req, res) => {
+    res.send('ok');
+})
+
+app.listen(port, () => {
+    console.log(`listening on ${port}`)
+})
