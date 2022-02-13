@@ -5,7 +5,7 @@ function App() {
   async function handleSubmit(e) {
     e.preventDefault();
     console.log(e.target.amount.value)
-    const response = await axios.get(`/api/ping`);
+    const response = await axios.get(`/api/hello`);
     const data = await response.data;
     console.log('data - ', data);
   }
