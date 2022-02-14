@@ -1,9 +1,12 @@
 import '../css/SideBar.css'
+import {Link} from "react-router-dom";
 
 const SideBar = () => {
     return (
         <div className="sidenav">
-            <a href="#about">충전</a>
+            <Link to="/charge">
+                <div className="sidenav-charge">충전</div>
+            </Link>
         </div>
     )
 }
