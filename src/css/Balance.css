@@ -1,0 +1,10 @@
+.balance {
+    font-size: 17px;
+    text-align: center;
+}
+
+.balance div {
+    margin: 14px 16px;
+    float: right;
+    display: block;
+}
