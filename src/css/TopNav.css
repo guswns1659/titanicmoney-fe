@@ -8,7 +8,7 @@ body {
     background-color: #333;
 }
 
-.topnav a {
+.topnav .logo {
     float: left;
     color: #f2f2f2;
     text-align: center;
