@@ -11,3 +11,11 @@
 .balance div {
     margin: 14px 16px;
 }
+
+.balance-amount {
+    order: 2
+}
+
+.balance-title {
+    order: 1
+}
