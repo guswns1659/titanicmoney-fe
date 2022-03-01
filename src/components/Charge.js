@@ -2,9 +2,12 @@ import "../css/Charge.css"
 
 const Charge = () => {
     return (
-        <div className="charge">
-            charge!!
-        </div>
+        <form className="charge-parent">
+            <input className="charge"/>
+            <button className="charge-button">
+                충전하기
+            </button>
+        </form>
     )
 }
 
