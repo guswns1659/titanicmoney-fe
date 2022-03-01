@@ -11,13 +11,11 @@ const POST_CHARGE_FAILURE = 'sample/POST_CHARGE_FAILURE'
 export const sampleCharge = (amount) => async dispatch => {
     dispatch({type: POST_CHARGE}); // request start
     try {
-        const response = await axios.get('/api/hello');
-        // TODO(jack.comeback) : GET은 backend까지 호출되는데 post가 정상적으로 안됌..
+        const response = await api.charge(amount);
         // debugger
-        // const data = await api.charge(amount);
         dispatch({
             type: POST_CHARGE_SUCCESS,
-            payload: response.data
+            payload: response.data.amount
         }) // request success
     } catch (e) {
         dispatch({

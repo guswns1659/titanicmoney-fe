@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const charge = async (amount) => {
-     const { data } =  await axios.post('/api/charge', {
+     return await axios.post('/api/charge', {
         tiAccountId: 12345,
         bankAccountId: "123-123",
         amount: Number(amount),
@@ -9,6 +9,4 @@ export const charge = async (amount) => {
         itemId: 1,
         requestId: "request-123"
     });
-
-     return data;
 }

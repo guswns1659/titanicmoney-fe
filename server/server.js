@@ -20,6 +20,11 @@ app.get('/api/ping', (req, res) => {
     res.send('ok');
 })
 
+app.post('/api/charge', (req, res) => {
+    console.log('body - ', req.body)
+    res.status(200).send({amount:Number(req.body.amount)})
+})
+
 app.use('/api/*', proxyServer)
 
 app.listen(port, () => {
