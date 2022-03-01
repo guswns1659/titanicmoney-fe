@@ -6,7 +6,6 @@ const CHARGE = 'charge/CHARGE'
 
 // action create
 export const writeAmount = createAction(WRITE_AMOUNT, amount => amount)
-
 export const charge = createAction(CHARGE, chargeAmount => chargeAmount)
 
 // Initial state
