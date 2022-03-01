@@ -1,6 +1,6 @@
 import Charge from "../components/Charge";
 import {useDispatch, useSelector} from "react-redux";
-import charger, {charge, writeAmount} from "../modules/charge";
+import {writeAmount} from "../modules/charge";
 import {useCallback} from "react";
 import {sampleCharge} from "../modules/sample";
 

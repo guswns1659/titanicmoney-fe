@@ -1,6 +1,5 @@
 import * as api from '../lib/api'
 import {handleActions} from "redux-actions";
-import axios from "axios";
 
 // action type
 const POST_CHARGE = 'sample/POST_CHARGE'
@@ -12,7 +11,6 @@ export const sampleCharge = (amount) => async dispatch => {
     dispatch({type: POST_CHARGE}); // request start
     try {
         const response = await api.charge(amount);
-        // debugger
         dispatch({
             type: POST_CHARGE_SUCCESS,
             payload: response.data.balance
