@@ -23,9 +23,7 @@ app.get('/api/ping', (req, res) => {
 
 // TODO(jack.comeback) : HPM 안쓰고 axios로 backend post 호출 성공
 app.post('/api/charge', async (req, res) => {
-    console.log('body - ', req.body)
     const response = await axios.post('http://localhost:8080/api/charge', req.body);
-    console.log(response)
     res.status(200).send(response.data)
 })
 
