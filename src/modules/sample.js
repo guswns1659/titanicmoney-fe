@@ -15,7 +15,7 @@ export const sampleCharge = (amount) => async dispatch => {
         // debugger
         dispatch({
             type: POST_CHARGE_SUCCESS,
-            payload: response.data.amount
+            payload: response.data.balance
         }) // request success
     } catch (e) {
         dispatch({

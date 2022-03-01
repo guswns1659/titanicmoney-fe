@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const {proxyServer} = require("./proxy/proxy");
+const axios = require('axios')
 
 const app = express();
 
@@ -20,9 +21,12 @@ app.get('/api/ping', (req, res) => {
     res.send('ok');
 })
 
-app.post('/api/charge', (req, res) => {
+// TODO(jack.comeback) : HPM 안쓰고 axios로 backend post 호출 성공
+app.post('/api/charge', async (req, res) => {
     console.log('body - ', req.body)
-    res.status(200).send({amount:Number(req.body.amount)})
+    const response = await axios.post('http://localhost:8080/api/charge', req.body);
+    console.log(response)
+    res.status(200).send(response.data)
 })
 
 app.use('/api/*', proxyServer)
