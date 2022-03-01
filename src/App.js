@@ -3,7 +3,7 @@ import TopNav from "./components/TopNav";
 import SideBar from "./components/SideBar";
 import Balance from "./components/Balance";
 import Center from "./components/Center";
-import Charge from "./components/Charge";
+import ChargeContainer from "./containers/ChargeContainer"
 import {BrowserRouter, Route} from "react-router-dom";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
             <SideBar></SideBar>
             <Balance></Balance>
             <Route exact path = "/" component={Center}/>
-            <Route path = "/charge" component={Charge}/>
+            <Route path = "/charge" component={ChargeContainer}/>
         </div>
     );
 }

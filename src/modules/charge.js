@@ -11,15 +11,15 @@ export const charge = createAction(CHARGE, chargeAmount => chargeAmount)
 
 // Initial state
 const initialState = {
+    changedChargeAmount: 0,
     chargeAmount: 0,
-    balance: 0,
 }
 
 // reducer
 const charger = handleActions(
     {
-        [WRITE_AMOUNT]: (state, { payload: amount }) => ({...state, chargeAmount: amount}),
-        [CHARGE]: (state, {payload: balance }) => ({...state, balance: balance})
+        [WRITE_AMOUNT]: (state, { payload: changedChargeAmount }) => ({...state, changedChargeAmount: changedChargeAmount}),
+        [CHARGE]: (state, {payload: chargeAmount }) => ({...state, chargeAmount: chargeAmount})
     },
     initialState
 )
