@@ -1,13 +1,13 @@
 import Balance from "../components/Balance";
-import {useDispatch, useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 
 const BalanceContainer = () => {
-    const { loadingCharge, chargeAmount } = useSelector(({sample}) => ({
-        loadingCharge: sample.loading.POST_CHARGE,
-        chargeAmount: sample.balance
+    const { loadingCharge, balance } = useSelector(({charger}) => ({
+        loadingCharge: charger.loading.POST_CHARGE,
+        balance: charger.balance
     }))
 
-    return <Balance loadingCharge={loadingCharge} balance={chargeAmount}></Balance>
+    return <Balance loadingCharge={loadingCharge} balance={balance}></Balance>
 }
 
 export default BalanceContainer;
