@@ -4,9 +4,9 @@ const serverPort = process.env.SERVER_PORT;
 
 const proxyServer = createProxyMiddleware({
     target: `localhost:${serverPort}`,
-    pathRewrite: {
-        '^/api/': '/',
-    },
+    // pathRewrite: {
+    //     '^/api/': '/',
+    // },
     router: (req) => "http://localhost:8080",
     changeOrigin: true
 });
