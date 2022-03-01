@@ -1,7 +1,7 @@
 import './App.css';
 import TopNav from "./components/TopNav";
 import SideBar from "./components/SideBar";
-import Balance from "./components/Balance";
+import BalanceContainer from "./containers/BalanceContainer"
 import Center from "./components/Center";
 import ChargeContainer from "./containers/ChargeContainer"
 import {BrowserRouter, Route} from "react-router-dom";
@@ -11,7 +11,7 @@ function App() {
         <div className="App">
             <TopNav></TopNav>
             <SideBar></SideBar>
-            <Balance></Balance>
+            <BalanceContainer></BalanceContainer>
             <Route exact path = "/" component={Center}/>
             <Route path = "/charge" component={ChargeContainer}/>
         </div>

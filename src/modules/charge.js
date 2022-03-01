@@ -19,7 +19,7 @@ const initialState = {
 const charger = handleActions(
     {
         [WRITE_AMOUNT]: (state, { payload: changedChargeAmount }) => ({...state, changedChargeAmount: changedChargeAmount}),
-        [CHARGE]: (state, {payload: chargeAmount }) => ({...state, chargeAmount: chargeAmount})
+        [CHARGE]: (state, {payload: chargeAmount }) => ({...state, chargeAmount: state.chargeAmount + chargeAmount})
     },
     initialState
 )
